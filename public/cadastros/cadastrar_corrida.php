@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $corrida = $corridaController->criarCorrida($pista, $data, $pilotosArray);
-    echo "<p>Corrida criada com ID: {$corrida->ID_CORRIDA}</p>";
+    echo "<p>Corrida criada com ID: {$corrida->ID}</p>";
 }
 ?>
 
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Listar pilotos disponíveis
                 $pilotosDisponiveis = $pilotoController->listarPilotos();
                 foreach ($pilotosDisponiveis as $piloto) {
-                    echo "<option value=\"{$piloto->ID_PILOTO}\">{$piloto->nome}</option>";
+                    echo "<option value=\"{$piloto->ID}\">{$piloto->nome}</option>";
                 }
                 ?>
             </select>

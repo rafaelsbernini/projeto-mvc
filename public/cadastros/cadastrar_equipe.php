@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $equipe = $equipeController->cadastrarEquipe($lider, $nome, $patrocinadores, $pilotosArray);
-    echo "<p>Equipe cadastrada com ID: {$equipe->ID_EQUIPE}</p>";
+    echo "<p>Equipe cadastrada com ID: {$equipe->ID}</p>";
 }
 ?>
 
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Listar pilotos disponíveis
                 $pilotosDisponiveis = $pilotoController->listarPilotos();
                 foreach ($pilotosDisponiveis as $piloto) {
-                    echo "<option value=\"{$piloto->ID_PILOTO}\">{$piloto->nome}</option>";
+                    echo "<option value=\"{$piloto->ID}\">{$piloto->nome}</option>";
                 }
                 ?>
             </select>

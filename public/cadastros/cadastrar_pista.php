@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pais = $_POST["pais"];
 
     $pista = $pistaController->cadastrarPista($cidade, $distancia, $pais);
-    echo "<p>Pista cadastrada com ID: {$pista->ID_PISTA}</p>";
+    echo "<p>Pista cadastrada com ID: {$pista->ID}</p>";
 }
 ?>
 
